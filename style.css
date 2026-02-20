@@ -136,24 +136,29 @@ button {
     background-color: white;
     border-radius: 50%;
     left: 5px;
+    transform: translateX(calc(var(--toggle-width) - var(--circle-size) - 9px));
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 2;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.mode-toggle:checked+.slider .circle {
-    transform: translateX(calc(var(--toggle-width) - var(--circle-size) - 9.5px));
+[data-theme="dark"] .slider .circle {
+    transform: translateX(0px);
 }
 
-.mode-toggle:checked+.slider .icon-moon {
+[data-theme="light"] .slider .icon-moon {
     filter: brightness(0) invert(1);
 }
 
-.mode-toggle:not(:checked)+.slider .icon-moon {
+[data-theme="light"] .slider .icon-sun {
     filter: brightness(1) invert(0);
 }
 
-.mode-toggle:not(:checked)+.slider .icon-sun {
+[data-theme="dark"] .slider .icon-moon {
+    filter: brightness(1) invert(0);
+}
+
+[data-theme="dark"] .slider .icon-sun {
     filter: brightness(0) invert(1);
 }
 
@@ -266,7 +271,6 @@ button {
     color: var(--text-sec);
 }
 
-/* Mobile nav hidden by default on desktop */
 .nav-bar-mobile {
     display: none;
 }
@@ -315,14 +319,12 @@ button {
         overflow-x: hidden !important;
     }
 
-    /* --- Header --- */
     header {
         padding: 1.25rem 0;
         height: auto;
         align-items: center;
     }
 
-    /* Show mobile nav, hide desktop nav */
     .nav-bar-desktop {
         display: none;
     }
@@ -347,6 +349,22 @@ button {
         padding: 0;
         display: flex;
         align-items: center;
+    }
+
+    [data-theme="light"] .mob-button {
+        filter: brightness(0) invert(1);
+    }
+
+    [data-theme="light"] .mob-button {
+        filter: brightness(1) invert(0);
+    }
+
+    [data-theme="dark"] .mob-button {
+        filter: brightness(1) invert(0);
+    }
+
+    [data-theme="dark"] .mob-button {
+        filter: brightness(0) invert(1);
     }
 
     .open-button img {
@@ -407,7 +425,6 @@ button {
         color: var(--accent);
     }
 
-    /* --- Section wrapper --- */
     .section-wrapper {
         display: flex;
         flex-direction: column;
@@ -417,7 +434,6 @@ button {
         gap: 2rem;
     }
 
-    /* Image on top */
     .section-wrapper article.image-wrapper {
         order: 1;
         width: 100% !important;
@@ -434,7 +450,6 @@ button {
         height: auto;
     }
 
-    /* Text content below */
     .section-wrapper article:first-of-type {
         order: 2;
         width: 100% !important;
@@ -462,7 +477,6 @@ button {
         text-transform: uppercase;
     }
 
-    /* Button row */
     .button-wrapper {
         display: flex;
         flex-direction: row;
@@ -487,7 +501,6 @@ button {
         font-weight: 500;
     }
 
-    /* Labels row */
     .label-wrapper {
         display: flex;
         flex-direction: row;
