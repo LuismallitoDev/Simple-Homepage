@@ -305,7 +305,9 @@ button {
     .nav-bar-desktop {
         display: none;
     }
-
+    main{
+        min-width: none;
+    }
     .nav-bar-mobile {
         padding: 1rem;
         position: relative;
