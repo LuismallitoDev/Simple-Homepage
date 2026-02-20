@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="resources/favicon.ico" type="image/x-icon" sizes="96x96" />
+  <link rel="stylesheet" href="style.css">
+  <title>Simple Homepage - Alarado | devChallenges.io</title>
+
+</head>
+
+<body>
+  <main>
+    <header>
+      <nav class="nav-bar-desktop" id="desktop-menu">
+        <img src="resources/logo-light.svg" alt="Alarado Logo" class="logo" id="logo">
+        <ul>
+          <li>
+            <a href="#">About us</a>
+          </li>
+          <li>
+            <a href="#">Product</a>
+          </li>
+          <li>
+            <a href="#">Resource</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+        <label class="theme-switch">
+          <input type="checkbox" id="mode-toggle-desktop" class="mode-toggle" checked>
+          <div class="slider">
+            <img src="./resources/Moon_fill.svg" class="icon-moon" alt="dark mode">
+            <img src="./resources/Sun_fill.svg" class="icon-sun" alt="light mode">
+            <div class="circle"></div>
+          </div>
+        </label>
+      </nav>
+      <nav class="nav-bar-mobile " id="mobile-menu">
+        <img src="resources/logo-light.svg" alt="Alarado Logo" class="logo">
+        <button class="open-button" id="open-button">
+          <img src="resources/hamburger-button.svg" alt="Hamburger Button">
+        </button>
+
+        <div class="burger-toggle">
+          <button class="close-button" id="close-button">
+            <img src="resources/close-button.svg" alt="Close Button">
+          </button>
+          <ul>
+            <li>
+              <a href="#">About us</a>
+            </li>
+            <li>
+              <a href="#">Product</a>
+            </li>
+            <li>
+              <a href="#">Resource</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+          <label class="theme-switch">
+            <input type="checkbox" id="mode-toggle-mobile" class="mode-toggle" checked>
+            <div class="slider">
+              <img src="./resources/Moon_fill.svg" class="icon-moon" alt="dark mode">
+              <img src="./resources/Sun_fill.svg" class="icon-sun" alt="light mode">
+              <div class="circle"></div>
+            </div>
+          </label>
+        </div>
+      </nav>
+    </header>
+    <section class="section-wrapper">
+      <article>
+        <p>😎 Simple way to communicate</p>
+        <h1>Actions for Accessibility in Design</h1>
+        <p>The fastest way to build and deploy websites with reusable components.</p>
+        <div class="button-wrapper">
+          <button class="filled">
+            GET STARTED
+          </button>
+          <button class="underlined">
+            Get live demo
+          </button>
+        </div>
+        <div class="label-wrapper">
+          <div class="labels">
+            <img src="resources/Done_ring_round_fill.svg" alt="Check Filled">
+            <span>No credit card required</span>
+          </div>
+          <div class="labels">
+            <img src="resources/Done_ring_round_fill.svg" alt="Check Filled">
+            <span>No software to install</span>
+          </div>
+        </div>
+      </article>
+      <article class="image-wrapper">
+        <img src="resources/hero-image-simple-homepage.png" alt="Hero Image">
+      </article>
+    </section>
+  </main>
+  <script src="index.js"></script>
+</body>
+
+</html>
